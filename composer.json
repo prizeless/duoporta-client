@@ -1,0 +1,35 @@
+{
+  "name": "prizeless/duoporta-client",
+  "type": "library",
+  "description": "Library for connecting and executing operations Duoporta API",
+  "keywords": [
+    "Duoporta"
+  ],
+  "homepage": "http://www.prizeless.net",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Antony Masocha",
+      "email": "antony@prizeless.net",
+      "homepage": "https://twitter.com/sochbonz"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "guzzlehttp/guzzle": "6.x"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "mockery/mockery": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Duoporta\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Duoporta\\Tests\\": "tests/"
+    }
+  }
+}

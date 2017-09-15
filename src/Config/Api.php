@@ -4,7 +4,7 @@ namespace Duoporta\Config;
 
 class Api
 {
-    const BASE_URL = 'http://api.duoporta.com/api';
+    const BASE_URL = 'http://www.duoporta.com/api';
 
     const API_KEY = '';
 

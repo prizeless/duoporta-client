@@ -5,13 +5,13 @@
   "keywords": [
     "Duoporta"
   ],
-  "homepage": "http://www.prizeless.net",
+  "homepage": "https://www.prizeless.net",
   "license": "MIT",
   "authors": [
     {
-      "name": "Antony Masocha",
-      "email": "antony@prizeless.net",
-      "homepage": "https://twitter.com/sochbonz"
+      "name": "Prizeless Technologies",
+      "email": "developer@prizeless.net",
+      "homepage": "https://www.prizeless.net"
     }
   ],
   "require": {

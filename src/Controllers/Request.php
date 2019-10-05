@@ -101,9 +101,10 @@ class Request
     }
 
     /**
-     * @param $derivativeId The derivative id from getModelDerivatives
+     * @param $derivativeId
      *
      * @return mixed
+     * @throws MakesError
      */
     public function getDerivativeFeatures($derivativeId)
     {
@@ -127,7 +128,7 @@ class Request
     {
         $result = $this->getClient()->post(
             $this->getUri($path),
-            ['form_params' => $this->getParameters($dateLastChanged), 'debug' => Api::DEBUG_API]
+            ['form_params' => $this->getParameters($dateLastChanged), 'debug' => Api::getDebug()]
         )->getBody()->getContents();
 
         return JsonParser::decode($result);
@@ -140,7 +141,7 @@ class Request
 
     private function getParameters($dateLastChanged)
     {
-        $params = ['client_id' => Api::CLIENT_ID, 'api_key' => Api::API_KEY];
+        $params = ['client_id' => Api::getClientId(), 'api_key' => Api::getApiKey()];
 
         if (empty($dateLastChanged) == false) {
             $params['last_changed'] = $dateLastChanged;

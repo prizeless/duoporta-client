@@ -2,9 +2,11 @@
 
 namespace Duoporta\Config;
 
+use function defined;
+
 class Api
 {
-    const BASE_URL = 'http://www.duoporta.com/api';
+    const BASE_URL = 'https://www.duoporta.com/api';
 
     const API_KEY = '';
 
@@ -31,4 +33,19 @@ class Api
     const MM_CODES_URL = '/mmcodes';
 
     const ALL_DERIVATIVE_DATA_URL = '/dump';
+
+    public static function getApiKey()
+    {
+        return defined('DUOPORTA_API_KEY') ? DUOPORTA_API_KEY : self::API_KEY;
+    }
+
+    public static function getClientId()
+    {
+        return defined('DUOPORTA_CLIENT_ID') ? DUOPORTA_CLIENT_ID : self::CLIENT_ID;
+    }
+
+    public static function getDebug()
+    {
+        return defined('DUOPORTA_API_DEBUG') ? DUOPORTA_API_DEBUG : self::DEBUG_API;
+    }
 }
